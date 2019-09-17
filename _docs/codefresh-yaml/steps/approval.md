@@ -138,6 +138,7 @@ Here is an example:
 {% highlight yaml %}
 {% raw %}
 version: '1.0'
+mode: parallel
 steps:
  askForPermission:
    type: pending-approval
@@ -178,6 +179,7 @@ steps:
    commands:
    - echo "prepare"
  deployToProdNow:
+   fail_fast: false
    type: pending-approval
    title: Should we deploy to prod
    stage: prepare
